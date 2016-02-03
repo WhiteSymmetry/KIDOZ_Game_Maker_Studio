@@ -6,7 +6,7 @@
 
 *Updated to KIDOZ SDK version 0.4.1*
  
-This GMS Smaple application project provides an example of the [KIDOZ](http://www.kidoz.net) SDK integration for Game maker studio android Extension.
+This GMS Sample application project provides an example of the [KIDOZ](http://www.kidoz.net) SDK integration for Game maker studio android Extension.
 
 The example application contains the following creative tools:
 * KIDOZ's Feed view (+Family) content tool - the `FeedView`
