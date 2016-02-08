@@ -137,7 +137,7 @@ image_index = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>collapse_panel();
+            <string>Kidoz_collapse_panel();
 </string>
           </argument>
         </arguments>

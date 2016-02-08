@@ -137,10 +137,10 @@ image_index = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(get_is_panel_expanded() &gt; 0) {
-   print_toast_log("Panel Expanded");
+            <string>if(Kidoz_get_is_panel_expanded() == KIDOZ_TRUE) {
+   Kidoz_print_toast_log("Panel Expanded");
 }else {
-   print_toast_log("Panel Collapsed");
+   Kidoz_print_toast_log("Panel Collapsed");
 }
 </string>
           </argument>

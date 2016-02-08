@@ -89,9 +89,13 @@ public class KidozGMS {
 	*@param x the x coordinate
 	*@param y the y coordinate
 	*/
-	public String addFeedButtonToView(double x,double y) {
+	public String addFeedButtonToView(double x,double y,double isAutoShow) {
 		if(mYoyoBridge != null) {
-		   mYoyoBridge.addFeedButton((int)x,(int)y);				 
+			boolean autoShow = false;
+			if((int)isAutoShow > 0) {
+				autoShow = true;
+			}			
+		   mYoyoBridge.addFeedButton((int)x,(int)y,-1,autoShow);				 
 	    }			
 		return "";
 	}
@@ -117,9 +121,13 @@ public class KidozGMS {
 	*@param panelType the panel type (PANEL_TYPE_BOTTOM , PANEL_TYPE_TOP ...)
 	*@param handlePosition the handle position (HANDLE_POSITION_START , HANDLE_POSITION_CENTER ...)
 	*/
-	public String addPanelToView(double panelType,double handlePosition) {
+	public String addPanelToView(double panelType,double handlePosition,double isAutoShow) {
 		if(mYoyoBridge != null) {
-		   mYoyoBridge.addPanelToView((int)panelType,(int)handlePosition);	
+			boolean autoShow = false;
+			if((int)isAutoShow > 0) {
+				autoShow = true;
+			}	
+		   mYoyoBridge.addPanelToView((int)panelType,(int)handlePosition,autoShow);	
 	    }						 
 		return "";
 	}
@@ -196,9 +204,13 @@ public class KidozGMS {
 	*
 	* @param bannerPosition the banner position (BANNER_POSITION_TOP , BANNER_POSITION_BOTTOM ...)
 	*/
-	public String addBannerToView(double bannerPosition) {
+	public String addBannerToView(double bannerPosition,double isAutoShow) {
 		if(mYoyoBridge != null) {
-			mYoyoBridge.addBannerToView((int)bannerPosition);	
+			boolean autoShow = false;
+			if((int)isAutoShow > 0) {
+				autoShow = true;
+			}	
+			mYoyoBridge.addBannerToView((int)bannerPosition,autoShow);	
 	    }						 
 		return "";
 	}

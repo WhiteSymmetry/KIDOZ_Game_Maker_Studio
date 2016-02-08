@@ -137,10 +137,10 @@ image_index = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(get_is_flexi_view_visible() &gt; 0) {
-   print_toast_log("Flexi VISIBLE");
+            <string>if(Kidoz_get_is_flexi_view_visible() == KIDOZ_TRUE) {
+   Kidoz_print_toast_log("Flexi VISIBLE");
 }else {
-   print_toast_log("Flexi HIDDEN");
+   Kidoz_print_toast_log("Flexi HIDDEN");
 }
 </string>
           </argument>

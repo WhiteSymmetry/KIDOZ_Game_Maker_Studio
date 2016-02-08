@@ -137,8 +137,8 @@ image_index = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>add_banner_view(0);
-print_toast_log("Loading Banner...");
+            <string>Kidoz_add_banner_view(KIDOZ_BANNER_POSITION_TOP,KIDOZ_TRUE);
+Kidoz_print_toast_log("Loading Banner...");
 </string>
           </argument>
         </arguments>

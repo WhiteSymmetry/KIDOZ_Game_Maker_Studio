@@ -137,7 +137,7 @@ image_index = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>show_banner();
+            <string>Kidoz_show_banner();
 </string>
           </argument>
         </arguments>

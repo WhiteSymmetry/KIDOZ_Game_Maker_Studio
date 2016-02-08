@@ -137,8 +137,8 @@ image_index = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>add_flexi_point_view(1,3);
-print_toast_log("Loading flexi view...");
+            <string>Kidoz_add_flexi_point_view(KIDOZ_TRUE,KIDOZ_FLEXI_VIEW_POSITION_MID_START);
+Kidoz_print_toast_log("Loading flexi view...");
 </string>
           </argument>
         </arguments>

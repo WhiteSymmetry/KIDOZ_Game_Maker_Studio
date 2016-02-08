@@ -35,7 +35,7 @@
     <file>
       <filename>KidozGMS</filename>
       <origname>extensions\KidozGMS.java</origname>
-      <init>kidoz_init</init>
+      <init>Kidoz_init</init>
       <final></final>
       <kind>4</kind>
       <uncompress>0</uncompress>
@@ -47,7 +47,7 @@
       <ProxyFiles/>
       <functions>
         <function>
-          <name>kidoz_init</name>
+          <name>Kidoz_init</name>
           <externalName>initKidoz</externalName>
           <kind>11</kind>
           <help></help>
@@ -56,37 +56,38 @@
           <args/>
         </function>
         <function>
-          <name>show_feed_view</name>
+          <name>Kidoz_show_feed_view</name>
           <externalName>showFeedView</externalName>
           <kind>11</kind>
           <help>Show the sdk feed view</help>
           <returnType>1</returnType>
-          <argCount>-1</argCount>
+          <argCount>0</argCount>
           <args/>
         </function>
         <function>
-          <name>add_feed_button</name>
+          <name>Kidoz_add_feed_button</name>
           <externalName>addFeedButtonToView</externalName>
           <kind>11</kind>
           <help>Add feed button to view </help>
           <returnType>1</returnType>
-          <argCount>2</argCount>
+          <argCount>3</argCount>
           <args>
+            <arg>2</arg>
             <arg>2</arg>
             <arg>2</arg>
           </args>
         </function>
         <function>
-          <name>dismiss_feed_view</name>
+          <name>Kidoz_dismiss_feed_view</name>
           <externalName>dismissFeedView</externalName>
           <kind>11</kind>
           <help>Dismiss feed view</help>
           <returnType>2</returnType>
-          <argCount>0</argCount>
+          <argCount>-1</argCount>
           <args/>
         </function>
         <function>
-          <name>change_feed_btn_visibility</name>
+          <name>Kidoz_change_feed_btn_visibility</name>
           <externalName>changeFeedButtonVisibility</externalName>
           <kind>11</kind>
           <help>hange feed button visibility state</help>
@@ -97,19 +98,20 @@
           </args>
         </function>
         <function>
-          <name>add_panel_view</name>
+          <name>Kidoz_add_panel_view</name>
           <externalName>addPanelToView</externalName>
           <kind>11</kind>
           <help>Add Panel to view </help>
           <returnType>2</returnType>
-          <argCount>2</argCount>
+          <argCount>3</argCount>
           <args>
+            <arg>2</arg>
             <arg>2</arg>
             <arg>2</arg>
           </args>
         </function>
         <function>
-          <name>change_panel_visibility</name>
+          <name>Kidoz_change_panel_visibility</name>
           <externalName>changePanelVisibility</externalName>
           <kind>11</kind>
           <help>Change Panel visibility state</help>
@@ -120,25 +122,25 @@
           </args>
         </function>
         <function>
-          <name>expand_panel</name>
+          <name>Kidoz_expand_panel</name>
           <externalName>expandPanel</externalName>
           <kind>11</kind>
           <help>Expand panel view</help>
           <returnType>1</returnType>
-          <argCount>0</argCount>
+          <argCount>-1</argCount>
           <args/>
         </function>
         <function>
-          <name>collapse_panel</name>
+          <name>Kidoz_collapse_panel</name>
           <externalName>collapsePanel</externalName>
           <kind>11</kind>
           <help>Collapse panel view</help>
           <returnType>1</returnType>
-          <argCount>0</argCount>
+          <argCount>-1</argCount>
           <args/>
         </function>
         <function>
-          <name>set_panel_color</name>
+          <name>Kidoz_set_panel_color</name>
           <externalName>setPanelViewColor</externalName>
           <kind>11</kind>
           <help>Set / Change panel view color  in hexa (#ffffff)</help>
@@ -149,36 +151,37 @@
           </args>
         </function>
         <function>
-          <name>add_banner_view</name>
+          <name>Kidoz_add_banner_view</name>
           <externalName>addBannerToView</externalName>
           <kind>11</kind>
           <help>Add banner to view </help>
           <returnType>1</returnType>
-          <argCount>1</argCount>
+          <argCount>2</argCount>
           <args>
+            <arg>2</arg>
             <arg>2</arg>
           </args>
         </function>
         <function>
-          <name>show_banner</name>
+          <name>Kidoz_show_banner</name>
           <externalName>showBanner</externalName>
           <kind>11</kind>
           <help>Show Banner</help>
           <returnType>1</returnType>
-          <argCount>0</argCount>
+          <argCount>-1</argCount>
           <args/>
         </function>
         <function>
-          <name>hide_banner</name>
+          <name>Kidoz_hide_banner</name>
           <externalName>hideBanner</externalName>
           <kind>11</kind>
           <help>Hide Banner</help>
           <returnType>1</returnType>
-          <argCount>0</argCount>
+          <argCount>-1</argCount>
           <args/>
         </function>
         <function>
-          <name>print_toast_log</name>
+          <name>Kidoz_print_toast_log</name>
           <externalName>printToastLog</externalName>
           <kind>11</kind>
           <help>Print toast log </help>
@@ -189,7 +192,7 @@
           </args>
         </function>
         <function>
-          <name>change_banner_position</name>
+          <name>Kidoz_change_banner_position</name>
           <externalName>changeBannerPosition</externalName>
           <kind>11</kind>
           <help>Change banner position</help>
@@ -200,16 +203,16 @@
           </args>
         </function>
         <function>
-          <name>get_is_panel_expanded</name>
+          <name>Kidoz_get_is_panel_expanded</name>
           <externalName>getIsPanelExpanded</externalName>
           <kind>11</kind>
           <help>Get is panel expanded</help>
           <returnType>2</returnType>
-          <argCount>0</argCount>
+          <argCount>-1</argCount>
           <args/>
         </function>
         <function>
-          <name>add_flexi_point_view</name>
+          <name>Kidoz_add_flexi_point_view</name>
           <externalName>addFlexiView</externalName>
           <kind>11</kind>
           <help>Add Flexi Point View to the screen</help>
@@ -221,34 +224,165 @@
           </args>
         </function>
         <function>
-          <name>show_flexi_view</name>
+          <name>Kidoz_show_flexi_view</name>
           <externalName>showFlexiView</externalName>
           <kind>11</kind>
           <help>Make flexi view visible to user (The view should be initiated)</help>
           <returnType>1</returnType>
-          <argCount>-1</argCount>
+          <argCount>0</argCount>
           <args/>
         </function>
         <function>
-          <name>hide_flexi_view</name>
+          <name>Kidoz_hide_flexi_view</name>
           <externalName>hideFlexiView</externalName>
           <kind>11</kind>
           <help>Hide flexi view from user</help>
           <returnType>1</returnType>
-          <argCount>-1</argCount>
+          <argCount>0</argCount>
           <args/>
         </function>
         <function>
-          <name>get_is_flexi_view_visible</name>
+          <name>Kidoz_get_is_flexi_view_visible</name>
           <externalName>getIsFlexiViewVisible</externalName>
           <kind>11</kind>
           <help>Chec if flexi view visible , 1- visible , 0 otherwise</help>
           <returnType>2</returnType>
-          <argCount>-1</argCount>
+          <argCount>0</argCount>
           <args/>
         </function>
       </functions>
-      <constants/>
+      <constants>
+        <constant>
+          <name>KIDOZ_PANEL_TYPE_BOTTOM</name>
+          <value>0</value>
+          <hidden>0</hidden>
+        </constant>
+        <constant>
+          <name>KIDOZ_PANEL_TYPE_TOP</name>
+          <value>1</value>
+          <hidden>0</hidden>
+        </constant>
+        <constant>
+          <name>KIDOZ_PANEL_TYPE_LEFT</name>
+          <value>2</value>
+          <hidden>0</hidden>
+        </constant>
+        <constant>
+          <name>KIDOZ_PANEL_TYPE_RIGHT</name>
+          <value>3</value>
+          <hidden>0</hidden>
+        </constant>
+        <constant>
+          <name>KIDOZ_HANDLE_POSITION_START</name>
+          <value>0</value>
+          <hidden>0</hidden>
+        </constant>
+        <constant>
+          <name>KIDOZ_HANDLE_POSITION_CENTER</name>
+          <value>1</value>
+          <hidden>0</hidden>
+        </constant>
+        <constant>
+          <name>KIDOZ_HANDLE_POSITION_END</name>
+          <value>2</value>
+          <hidden>0</hidden>
+        </constant>
+        <constant>
+          <name>KIDOZ_BANNER_POSITION_TOP</name>
+          <value>0</value>
+          <hidden>0</hidden>
+        </constant>
+        <constant>
+          <name>KIDOZ_BANNER_POSITION_BOTTOM</name>
+          <value>1</value>
+          <hidden>0</hidden>
+        </constant>
+        <constant>
+          <name>KIDOZ_BANNER_POSITION_TOP_LEFT</name>
+          <value>2</value>
+          <hidden>0</hidden>
+        </constant>
+        <constant>
+          <name>KIDOZ_BANNER_POSITION_TOP_RIGHT</name>
+          <value>3</value>
+          <hidden>0</hidden>
+        </constant>
+        <constant>
+          <name>KIDOZ_BANNER_POSITION_BOTTOM_LEFT</name>
+          <value>4</value>
+          <hidden>0</hidden>
+        </constant>
+        <constant>
+          <name>KIDOZ_BANNER_POSITION_BOTTOM_RIGHT</name>
+          <value>5</value>
+          <hidden>0</hidden>
+        </constant>
+        <constant>
+          <name>KIDOZ_FLEXI_VIEW_POSITION_TOP_START</name>
+          <value>0</value>
+          <hidden>0</hidden>
+        </constant>
+        <constant>
+          <name>KIDOZ_FLEXI_VIEW_POSITION_TOP_CENTER</name>
+          <value>1</value>
+          <hidden>0</hidden>
+        </constant>
+        <constant>
+          <name>KIDOZ_FLEXI_VIEW_POSITION_TOP_END</name>
+          <value>2</value>
+          <hidden>0</hidden>
+        </constant>
+        <constant>
+          <name>KIDOZ_FLEXI_VIEW_POSITION_MID_START</name>
+          <value>3</value>
+          <hidden>0</hidden>
+        </constant>
+        <constant>
+          <name>KIDOZ_FLEXI_VIEW_POSITION_MID_CENTER</name>
+          <value>4</value>
+          <hidden>0</hidden>
+        </constant>
+        <constant>
+          <name>KIDOZ_FLEXI_VIEW_POSITION_MID_END</name>
+          <value>5</value>
+          <hidden>0</hidden>
+        </constant>
+        <constant>
+          <name>KIDOZ_FLEXI_VIEW_POSITION_BOTTOM_START</name>
+          <value>6</value>
+          <hidden>0</hidden>
+        </constant>
+        <constant>
+          <name>KIDOZ_FLEXI_VIEW_POSITION_BOTTOM_CENTER</name>
+          <value>7</value>
+          <hidden>0</hidden>
+        </constant>
+        <constant>
+          <name>KIDOZ_FLEXI_VIEW_POSITION_BOTTOM_END</name>
+          <value>8</value>
+          <hidden>0</hidden>
+        </constant>
+        <constant>
+          <name>KIDOZ_VISIBLE</name>
+          <value>1</value>
+          <hidden>0</hidden>
+        </constant>
+        <constant>
+          <name>KIDOZ_INVISIBLE</name>
+          <value>0</value>
+          <hidden>0</hidden>
+        </constant>
+        <constant>
+          <name>KIDOZ_TRUE</name>
+          <value>1</value>
+          <hidden>0</hidden>
+        </constant>
+        <constant>
+          <name>KIDOZ_FALSE</name>
+          <value>0</value>
+          <hidden>0</hidden>
+        </constant>
+      </constants>
     </file>
   </files>
 </extension>

@@ -137,7 +137,7 @@ image_index = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>show_feed_view();
+            <string>Kidoz_show_feed_view();
 </string>
           </argument>
         </arguments>
