@@ -138,6 +138,8 @@ image_index = 0;
           <argument>
             <kind>1</kind>
             <string>Kidoz_add_flexi_point_view(KIDOZ_TRUE,KIDOZ_FLEXI_VIEW_POSITION_MID_START);
+Kidoz_set_flexi_view_draggable(KIDOZ_TRUE);
+Kidoz_set_flexi_view_closable(KIDOZ_TRUE);
 Kidoz_print_toast_log("Loading flexi view...");
 </string>
           </argument>

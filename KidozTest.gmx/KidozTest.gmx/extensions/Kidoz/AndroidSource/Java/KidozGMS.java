@@ -131,6 +131,24 @@ public class KidozGMS {
 	    }						 
 		return "";
 	}
+	
+	/** Add Panel to view with additional parameters
+	*
+	*@param panelType the panel type (PANEL_TYPE_BOTTOM , PANEL_TYPE_TOP ...)
+	*@param handlePosition the handle position (HANDLE_POSITION_START , HANDLE_POSITION_CENTER ...)
+	*@param startDelay      delay in seconds before automatic invocation of panel expand , pass -1 to  disable
+    *@param showPeriod      period in seconds to show the panel before closing it, pass -1 to  disable
+	*/
+	public String addPanelToViewExtended(double panelType,double handlePosition,double isAutoShow,double startDelay,double showPeriod) {
+		if(mYoyoBridge != null) {
+			boolean autoShow = false;
+			if((int)isAutoShow > 0) {
+				autoShow = true;
+			}	
+		   mYoyoBridge.addPanelToView((int)panelType,(int)handlePosition,autoShow,(float)startDelay,(float)showPeriod);	
+	    }						 
+		return "";
+	}
 		
 		
 	/** Change Panel visibility
@@ -305,6 +323,38 @@ public class KidozGMS {
 		return isVisible;
 	}
 	
+	
+	/** 
+	* Set flexi view can be dragabale by user
+	*
+	* @param isDraggable
+	*/
+	public String setFlexiViewDraggable(double isDraggable) {
+		if(mYoyoBridge != null) {	 
+            boolean draggable = false;
+			if((int)isDraggable > 0) {
+				draggable = true;
+			}			
+			mYoyoBridge.setFlexiViewDraggable(draggable);			  
+	    }							 
+		return "";
+	}
+	
+	/** 
+	* Set flexi view can be closed by user
+	*
+	* @param isClosable
+	*/
+	public String setFlexiViewClosable(double isClosable) {
+		if(mYoyoBridge != null) {	 
+            boolean closable = false;
+			if((int)isClosable > 0) {
+				closable = true;
+			}				
+			mYoyoBridge.setFlexiViewClosable(closable);			  
+	    }							 
+		return "";
+	}
  
 	/** 
 	* Print toast log 

@@ -250,6 +250,43 @@
           <argCount>-1</argCount>
           <args/>
         </function>
+        <function>
+          <name>Kidoz_add_panel_view_extended</name>
+          <externalName>addPanelToViewExtended</externalName>
+          <kind>11</kind>
+          <help>Kidoz_add_panel_view_extended(panel_type,handle_position,is_auto_show,startDelay,showPeriod)  - Add kidoz Panel to view with additional parameters for first lounch</help>
+          <returnType>2</returnType>
+          <argCount>5</argCount>
+          <args>
+            <arg>2</arg>
+            <arg>2</arg>
+            <arg>2</arg>
+            <arg>2</arg>
+            <arg>2</arg>
+          </args>
+        </function>
+        <function>
+          <name>Kidoz_set_flexi_view_draggable</name>
+          <externalName>setFlexiViewDraggable</externalName>
+          <kind>11</kind>
+          <help>Kidoz_set_flexi_view_draggable(draggable) - Set is flexi view can be gragged by user</help>
+          <returnType>2</returnType>
+          <argCount>1</argCount>
+          <args>
+            <arg>2</arg>
+          </args>
+        </function>
+        <function>
+          <name>Kidoz_set_flexi_view_closable</name>
+          <externalName>setFlexiViewClosable</externalName>
+          <kind>11</kind>
+          <help>Kidoz_set_flexi_view_closable(closable) - Set is flexi view can be closed by user</help>
+          <returnType>2</returnType>
+          <argCount>1</argCount>
+          <args>
+            <arg>2</arg>
+          </args>
+        </function>
       </functions>
       <constants>
         <constant>

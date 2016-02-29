@@ -137,7 +137,8 @@ image_index = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>Kidoz_add_panel_view(KIDOZ_PANEL_TYPE_BOTTOM,KIDOZ_HANDLE_POSITION_END,KIDOZ_TRUE);
+            <string>//Kidoz_add_panel_view(KIDOZ_PANEL_TYPE_BOTTOM,KIDOZ_HANDLE_POSITION_END,KIDOZ_TRUE);
+Kidoz_add_panel_view_extended(KIDOZ_PANEL_TYPE_BOTTOM,KIDOZ_HANDLE_POSITION_END,KIDOZ_TRUE,2,4);
 Kidoz_print_toast_log("Loading panel...");
 </string>
           </argument>
