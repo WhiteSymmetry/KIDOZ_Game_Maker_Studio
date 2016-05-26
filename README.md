@@ -13,3 +13,4 @@ The example application contains the following creative tools:
 * KIDOZ's Panel view (+Family) content tool - the `PanelView`
 * KIDOZ's Banner view  content tool - the `KidozBanner`
 * KIDOZ's Flexi Point view content tool - the `FlexiView`
+* KIDOZ's Interstitial View content tool - the `KidozInterstitial`
