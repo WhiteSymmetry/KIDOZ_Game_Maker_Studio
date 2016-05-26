@@ -58,7 +58,7 @@ public class KidozGMS {
 			KidozSDK.setLoggingEnabled(true);
 			// Put your publisher id and security token provided
 			// ( publisher id - 8 IS FOR TESTING PURPOSES ONLY )
-			KidozSDK.initialize(RunnerActivity.CurrentActivity, "7","QVBIh5K3tr1AxO4A1d4ZWx1YAe5567os");
+			KidozSDK.initialize(RunnerActivity.CurrentActivity, "8","QVBIh5K3tr1AxO4A1d4ZWx1YAe5567os");
 		}
  
 	    if(mYoyoBridge == null) {
@@ -151,7 +151,8 @@ public class KidozGMS {
 	}
 		
 		
-	/** Change Panel visibility
+	/** 
+	* Change Panel visibility
 	*
 	*@param visibility 0 - not visible , > 0 visible
 	*/
@@ -354,6 +355,50 @@ public class KidozGMS {
 			mYoyoBridge.setFlexiViewClosable(closable);			  
 	    }							 
 		return "";
+	}
+	
+	/** 
+	* Load interstitial view Ad
+	*
+	* @param autoShowOnLoad
+	*/
+	public String loadInterstitialView(double autoShowOnLoad) {
+		if(mYoyoBridge != null) {	 
+            boolean autoshow = false;
+			if((int)autoShowOnLoad > 0) {
+				autoshow = true;
+			}				
+			mYoyoBridge.loadInterstitialAd(autoshow);			  
+	    }							 
+		return "";
+	}
+	
+	/** 
+	* Show interstitial view Ad
+	*/
+	public String showInterstitial() {
+		if(mYoyoBridge != null) {	         			
+			mYoyoBridge.showInterstitial();			  
+	    }							 
+		return "";
+	}
+	
+	/** 
+	* Get is interstitial ad loaded
+	*
+	* @return 1 - for loaded and 0 for not
+	*/
+	public Double getIsInterstitialLoaded() {
+		double isLoaded = 0f;
+		if(mYoyoBridge != null) {
+		  boolean loaded = mYoyoBridge.getIsInterstitialLoaded();		
+			if(loaded == true) {
+				isLoaded = 1f;
+			}else {
+				isLoaded = 0f;
+			}	  
+	    }				 
+		return isLoaded;
 	}
  
 	/** 

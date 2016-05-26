@@ -23,7 +23,11 @@
                 &lt;action android:name="android.intent.action.PACKAGE_ADDED" /&gt;
                 &lt;data android:scheme="package" /&gt;
             &lt;/intent-filter&gt;
-        &lt;/receiver&gt;</androidinject>
+        &lt;/receiver&gt;
+
+ &lt;activity android:name="com.kidoz.sdk.api.ui_views.interstitial.KidozAdActivity"
+                  android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+                  /&gt;</androidinject>
   <iosSystemFrameworks/>
   <iosThirdPartyFrameworks/>
   <androidPermissions>
@@ -286,6 +290,35 @@
           <args>
             <arg>2</arg>
           </args>
+        </function>
+        <function>
+          <name>Kidoz_load_interstitial</name>
+          <externalName>loadInterstitialView</externalName>
+          <kind>11</kind>
+          <help>Kidoz_load_interstitial(show_on_load) - Load and prepare interstitial Ad view</help>
+          <returnType>1</returnType>
+          <argCount>1</argCount>
+          <args>
+            <arg>2</arg>
+          </args>
+        </function>
+        <function>
+          <name>Kidoz_show_interstitial</name>
+          <externalName>showInterstitial</externalName>
+          <kind>11</kind>
+          <help>Kidoz_show_interstitial() - Show interstitial Ad view (Should be prepared before)</help>
+          <returnType>1</returnType>
+          <argCount>-1</argCount>
+          <args/>
+        </function>
+        <function>
+          <name>Kidoz_get_is_interstitial_loaded</name>
+          <externalName>getIsInterstitialLoaded</externalName>
+          <kind>11</kind>
+          <help>Kidoz_get_is_interstitial_loaded() - Returns if interstitial  current Ad has been loaded and can be shown  , 1- loaded , 0 otherwise</help>
+          <returnType>2</returnType>
+          <argCount>0</argCount>
+          <args/>
         </function>
       </functions>
       <constants>

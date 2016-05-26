@@ -26,11 +26,13 @@
     <sprite>sprites\hide_panel_sprite</sprite>
     <sprite>sprites\show_feed_btn_sprite</sprite>
     <sprite>sprites\hide_feed_btn_sprite</sprite>
+    <sprite>sprites\load_interstitial_ad_sprite</sprite>
+    <sprite>sprites\show_interstitial_sprite</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <objects name="objects">
-    <object>objects\open_feed_view</object>
+    <object>objects\show_feed_btn</object>
     <object>objects\add_feed_btn</object>
     <object>objects\add_panel_btn</object>
     <object>objects\add_banner_btn</object>
@@ -47,6 +49,8 @@
     <object>objects\hide_panel_btn</object>
     <object>objects\show_button_btn</object>
     <object>objects\hide_button_btn</object>
+    <object>objects\show_interstitial_ad</object>
+    <object>objects\load_interstitial</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
