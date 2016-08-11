@@ -15,7 +15,7 @@ import ${YYAndroidPackageName}.RunnerActivity;
 
 
 /**
- * Created by Gameover on 21.12.2015.
+ * Created by KIDOZ LTD
  */
 public class KidozGMS {
 	
@@ -206,7 +206,7 @@ public class KidozGMS {
 	}
 	
 	/** 
-	* Set / Change panel view color 
+	* Set/Change panel view color 
 	*
 	* @param colorHex color in hexa (#ffffff)
 	*/
