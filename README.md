@@ -16,19 +16,18 @@ The example application contains the following creative tools:
 * KIDOZ Interstitial View content tool - the `KidozInterstitial`
 
 
-To avoid compilation error, the folowing lines need to be added to GMS runner project (via ...\runner\ProjectFiles\build.gradle
+To avoid compilation error, the folowing lines need to be added to GMS runner project build.gradle file (via ...\runner\ProjectFiles\build.gradle)
 
 ```groovy
-
-  android {
-    ...
+android {
+  ...
 
   lintOptions {
         abortOnError false
-  warning 'InvalidPackage'
-    }
+        warning 'InvalidPackage'
+  }
     
-     ...
+  ...
     
-    }
+ }
 ``` 
