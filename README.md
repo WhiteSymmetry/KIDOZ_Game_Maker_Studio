@@ -14,3 +14,21 @@ The example application contains the following creative tools:
 * KIDOZ Banner view  content tool - the `KidozBanner`
 * KIDOZ Flexi Point view content tool - the `FlexiView`
 * KIDOZ Interstitial View content tool - the `KidozInterstitial`
+
+
+To avoid compilation error, the folowing lines need to be added to GMS runner project (via ...\runner\ProjectFiles\build.gradle
+
+```groovy
+
+  android {
+    ...
+
+  lintOptions {
+        abortOnError false
+  warning 'InvalidPackage'
+    }
+    
+     ...
+    
+    }
+``` 
