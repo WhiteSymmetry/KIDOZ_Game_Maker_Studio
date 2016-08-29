@@ -11,7 +11,6 @@ Inludes GMS KIDOZ SDK Android Extension library + Sample project and example of 
 The example application contains the following creative tools:
 * KIDOZ Feed view (+Family) content tool - the `FeedView`
 * KIDOZ Panel view (+Family) content tool - the `PanelView`
-* KIDOZ Banner view  content tool - the `KidozBanner`
 * KIDOZ Flexi Point view content tool - the `FlexiView`
 * KIDOZ Interstitial View content tool - the `KidozInterstitial`
 
