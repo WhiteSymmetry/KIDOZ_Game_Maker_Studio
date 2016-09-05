@@ -15,8 +15,16 @@ The example application contains the following creative tools:
 * KIDOZ Flexi Point view content tool - the `FlexiView`
 * KIDOZ Interstitial View content tool - the `KidozInterstitial`
 
+### Setup
+When initializing the KIDOZ SDK Extension, please make sure to use your given `publisherID` and `securityToken`. To receive the credentials please sign up [HERE](http://accounts.kidoz.net/publishers/register?utm_source=&utm_content=&utm_campaign=&utm_medium=).
+</br>
+ 
+Change the values of `KIDOZ_SDK_PUBLISHER_ID` and `KIDOZ_SDK_SECURITY_TOKEN` Constants in the Kidoz/KidozGMS extension to your `publisherID` and `securityToken`. ( The default value of `publisherId = 8` is for debug purposes only!)
+<img src="https://s3.amazonaws.com/kidoz-cdn/sdk/GitHub_Tutorial_Img/gms_tutorial_1.JPG" width="230px" height="260px">
 
-To avoid compilation error, the folowing lines need to be added to GMS runner project build.gradle file (via ...\runner\ProjectFiles\build.gradle)
+
+### Important !
+To avoid compilation errors, the folowing lines need to be added to GMS runner project build.gradle file (via ...\runner\ProjectFiles\build.gradle)
 
 ```groovy
 android {
