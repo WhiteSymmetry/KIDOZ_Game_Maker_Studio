@@ -12,12 +12,15 @@ import com.kidoz.sdk.api.platforms.YoYoGmsBridge;
 
 import ${YYAndroidPackageName}.R;
 import ${YYAndroidPackageName}.RunnerActivity;
+import com.yoyogames.runner.RunnerJNILib;
 
 
 /**
  * Created by KIDOZ LTD
  */
-public class KidozGMS {
+public class KidozGMS implements YoYoGmsBridge.IOnGmsEventListener{
+	
+	private static final int EVENT_OTHER_SOCIAL = 70;
 	
 	// Panel properties
 	public static final int PANEL_TYPE_BOTTOM = 0;
@@ -30,14 +33,6 @@ public class KidozGMS {
     public static final int HANDLE_POSITION_CENTER = 1;
     public static final int HANDLE_POSITION_END = 2;
 
-	// Banner properties
-    public static final int BANNER_POSITION_TOP = 0;
-    public static final int BANNER_POSITION_BOTTOM = 1;
-    public static final int BANNER_POSITION_TOP_LEFT = 2;
-    public static final int BANNER_POSITION_TOP_RIGHT = 3;
-    public static final int BANNER_POSITION_BOTTOM_LEFT = 4;
-    public static final int BANNER_POSITION_BOTTOM_RIGHT = 5;
-	
 	// Flexi View position type
     public static final int FLEXI_VIEW_POSITION_TOP_START = 0;
     public static final int FLEXI_VIEW_POSITION_TOP_CENTER = 1;
@@ -49,6 +44,30 @@ public class KidozGMS {
     public static final int FLEXI_VIEW_POSITION_BOTTOM_CENTER = 7;
     public static final int FLEXI_VIEW_POSITION_BOTTOM_END = 8;
 	
+	
+	public static final double ON_FEED_DISMISS_EVENT = 1;
+	public static final double ON_FEED_READY_TO_SHOW_EVENT = 2;
+	public static final double ON_FEED_READY_EVENT = 3;
+	public static final double ON_PANEL_EXPAND_EVENT = 4;
+	public static final double ON_PANEL_COLLAPSE_EVENT = 5;
+	public static final double ON_PANEL_READY_EVENT = 6;
+	public static final double ON_FLEXI_VIEW_READY_EVENT = 7;
+	public static final double ON_FLEXI_VIEW_HIDE_EVENT = 8;
+	public static final double ON_FLEXI_VIEW_VISIBLE_EVENT = 9;
+	public static final double ON_PLAYER_OPEN_EVENT = 10;
+	public static final double ON_PLAYER_CLOSE_EVENT = 11;
+	public static final double ON_INTERSTITIAL_OPEN_EVENT = 12;
+	public static final double ON_INTERSTITIAL_CLOSE_EVENT = 13;
+	public static final double ON_INTERSTITIAL_READY_EVENT = 14;
+	public static final double ON_INTERSTITIAL_LOAD_FAILED_EVENT = 15;
+	public static final double ON_REWARDED_EVENT = 16;
+	public static final double ON_REWARDED_VIDEO_STARTED_EVENT = 17;
+	
+	
+	public static final double ON_VIDEO_UNIT_READY_EVENT = 18;
+	public static final double ON_VIDEO_UNIT_OPEN_EVENT = 19;
+	public static final double ON_VIDEO_UNIT_CLOSE_EVENT = 20;
+	
     private YoYoGmsBridge mYoyoBridge;
 
 	/** Initiate sdk and bridge controller*/
@@ -57,12 +76,14 @@ public class KidozGMS {
 		if (KidozSDK.isInitialised() == false) {
 			KidozSDK.setLoggingEnabled(true);
 			// Put your publisher id and security token provided
-			// ( publisher id - 8 IS FOR TESTING PURPOSES ONLY )
-			KidozSDK.initialize(RunnerActivity.CurrentActivity, "8","QVBIh5K3tr1AxO4A1d4ZWx1YAe5567os");
+			String publisherID = RunnerActivity.mYYPrefs.getString("KIDOZ_SDK_PUBLISHER_ID");
+			String securityToken = RunnerActivity.mYYPrefs.getString("KIDOZ_SDK_SECURITY_TOKEN");
+			
+			KidozSDK.initialize(RunnerActivity.CurrentActivity, publisherID,securityToken);
 		}
  
 	    if(mYoyoBridge == null) {
-		   mYoyoBridge = new YoYoGmsBridge(RunnerActivity.CurrentActivity);
+		   mYoyoBridge = new YoYoGmsBridge(RunnerActivity.CurrentActivity,this);
 	    }  	
         return "";
     }
@@ -131,25 +152,7 @@ public class KidozGMS {
 	    }						 
 		return "";
 	}
-	
-	/** Add Panel to view with additional parameters
-	*
-	*@param panelType the panel type (PANEL_TYPE_BOTTOM , PANEL_TYPE_TOP ...)
-	*@param handlePosition the handle position (HANDLE_POSITION_START , HANDLE_POSITION_CENTER ...)
-	*@param startDelay      delay in seconds before automatic invocation of panel expand , pass -1 to  disable
-    *@param showPeriod      period in seconds to show the panel before closing it, pass -1 to  disable
-	*/
-	public String addPanelToViewExtended(double panelType,double handlePosition,double isAutoShow,double startDelay,double showPeriod) {
-		if(mYoyoBridge != null) {
-			boolean autoShow = false;
-			if((int)isAutoShow > 0) {
-				autoShow = true;
-			}	
-		   mYoyoBridge.addPanelToView((int)panelType,(int)handlePosition,autoShow,(float)startDelay,(float)showPeriod);	
-	    }						 
-		return "";
-	}
-		
+
 		
 	/** 
 	* Change Panel visibility
@@ -204,70 +207,7 @@ public class KidozGMS {
 	    }					 			 			 
 		return val;
 	}
-	
-	/** 
-	* Set/Change panel view color 
-	*
-	* @param colorHex color in hexa (#ffffff)
-	*/
-	public String setPanelViewColor(String colorHex) {
-		if(mYoyoBridge != null) {
-			mYoyoBridge.setPanelViewColor(colorHex);		
-	    }					 		 			 
-		return "";
-	}
-	 
-	
-	/** 
-	* Add banner to view 
-	*
-	* @param bannerPosition the banner position (BANNER_POSITION_TOP , BANNER_POSITION_BOTTOM ...)
-	*/
-	public String addBannerToView(double bannerPosition,double isAutoShow) {
-		if(mYoyoBridge != null) {
-			boolean autoShow = false;
-			if((int)isAutoShow > 0) {
-				autoShow = true;
-			}	
-			mYoyoBridge.addBannerToView((int)bannerPosition,autoShow);	
-	    }						 
-		return "";
-	}
-	
-	/** 
-	* Change banner position
-	*
-	* @param bannerPosition the banner position (BANNER_POSITION_TOP , BANNER_POSITION_BOTTOM ...)
-	*/
-	public String changeBannerPosition(double bannerPosition) {
-		if(mYoyoBridge != null) {
-		  mYoyoBridge.changeBannerPosition((int)bannerPosition);	
-	    }						 
-		return "";
-	}
-	
-	
-	/** 
-	* Show Banner
-	*/
-	public String showBanner() {
-		if(mYoyoBridge != null) {
-			mYoyoBridge.showBanner();	
-	    }						 
-		return "";
-	}
-	
-	
-	/** 
-	* Hide Banner
-	*/
-	public String hideBanner() {
-		if(mYoyoBridge != null) {
-		   mYoyoBridge.hideBanner();			
-	    }				 
-		return "";
-	}
-	
+
 	
 	/** 
 	* Add Flexi Point View to the screen
@@ -324,39 +264,6 @@ public class KidozGMS {
 		return isVisible;
 	}
 	
-	
-	/** 
-	* Set flexi view can be dragabale by user
-	*
-	* @param isDraggable
-	*/
-	public String setFlexiViewDraggable(double isDraggable) {
-		if(mYoyoBridge != null) {	 
-            boolean draggable = false;
-			if((int)isDraggable > 0) {
-				draggable = true;
-			}			
-			mYoyoBridge.setFlexiViewDraggable(draggable);			  
-	    }							 
-		return "";
-	}
-	
-	/** 
-	* Set flexi view can be closed by user
-	*
-	* @param isClosable
-	*/
-	public String setFlexiViewClosable(double isClosable) {
-		if(mYoyoBridge != null) {	 
-            boolean closable = false;
-			if((int)isClosable > 0) {
-				closable = true;
-			}				
-			mYoyoBridge.setFlexiViewClosable(closable);			  
-	    }							 
-		return "";
-	}
-	
 	/** 
 	* Load interstitial view Ad
 	*
@@ -373,12 +280,50 @@ public class KidozGMS {
 		return "";
 	}
 	
+	
+	/** 
+	* Load interstitial view Ad
+	*
+	* @param autoShowOnLoad
+	*/
+	public String loadRewardedVideoView(double autoShowOnLoad) {
+		if(mYoyoBridge != null) {	 
+            boolean autoshow = false;
+			if((int)autoShowOnLoad > 0) {
+				autoshow = true;
+			}				
+			mYoyoBridge.loadRewardedAd(autoshow);			  
+	    }							 
+		return "";
+	}
+	
 	/** 
 	* Show interstitial view Ad
 	*/
 	public String showInterstitial() {
 		if(mYoyoBridge != null) {	         			
 			mYoyoBridge.showInterstitial();			  
+	    }							 
+		return "";
+	}
+	
+	/** 
+	* Show rewarded vudei add if ready
+	*/
+	public String showRewardedVideoAd() {
+		if(mYoyoBridge != null) {	         			
+			mYoyoBridge.showInterstitial();			  
+	    }							 
+		return "";
+	}
+	
+	
+	/** 
+	* Show video unit
+	*/
+	public String showVideoUnit() {
+		if(mYoyoBridge != null) {	         			
+			mYoyoBridge.showVideoUnit();			  
 	    }							 
 		return "";
 	}
@@ -411,5 +356,138 @@ public class KidozGMS {
 		   mYoyoBridge.printToastLog(text);
 	    }								 
 		return "";
+	}
+	
+	
+	@Override
+    public void onFeedDismissEvent()
+    {
+        sendAsyncEvent(ON_FEED_DISMISS_EVENT);
+    }
+
+    @Override
+    public void onFeedReadyToShowEvent()
+    {
+		sendAsyncEvent(ON_FEED_READY_TO_SHOW_EVENT);
+    }
+
+    @Override
+    public void onFeedReadyEvent()
+    {
+		sendAsyncEvent(ON_FEED_READY_EVENT);
+    }
+
+    @Override
+    public void onPanelCollapseEvent()
+    {
+		sendAsyncEvent(ON_PANEL_COLLAPSE_EVENT);
+    }
+
+    @Override
+    public void onPanelExpandEvent()
+    {
+		sendAsyncEvent(ON_PANEL_EXPAND_EVENT);
+    }
+
+    @Override
+    public void onPanelReadyEvent()
+    {
+		sendAsyncEvent(ON_PANEL_READY_EVENT);
+    }
+
+    @Override
+    public void onFlexiViewReadyEvent()
+    {
+		sendAsyncEvent(ON_FLEXI_VIEW_READY_EVENT);
+    }
+
+    @Override
+    public void onFlexiViewHideEvent()
+    {
+		sendAsyncEvent(ON_FLEXI_VIEW_HIDE_EVENT);
+    }
+
+    @Override
+    public void onFlexiViewVisibleEvent()
+    {
+		sendAsyncEvent(ON_FLEXI_VIEW_VISIBLE_EVENT);
+    }
+
+    @Override
+    public void onPlayerOpenEvent()
+    {
+		sendAsyncEvent(ON_PLAYER_OPEN_EVENT);
+    }
+
+    @Override
+    public void onPlayerCloseEvent()
+    {
+		sendAsyncEvent(ON_PLAYER_CLOSE_EVENT);
+    }
+
+    @Override
+    public void onInterstitialOpenEvent()
+    {
+		sendAsyncEvent(ON_INTERSTITIAL_OPEN_EVENT);
+    }
+
+    @Override
+    public void onInterstitialCloseEvent()
+    {
+		sendAsyncEvent(ON_INTERSTITIAL_CLOSE_EVENT);
+    }
+
+    @Override
+    public void onInterstitialReadyEvent()
+    {
+		sendAsyncEvent(ON_INTERSTITIAL_READY_EVENT);
+    }
+
+    @Override
+    public void onInterstitialLoadFailedEvent()
+    {
+		sendAsyncEvent(ON_INTERSTITIAL_LOAD_FAILED_EVENT);
+    }
+
+    @Override
+    public void onRewardedEvent()
+    {
+		sendAsyncEvent(ON_REWARDED_EVENT);
+    }
+
+    @Override
+    public void onRewardedVideoStartedEvent()
+    {
+		sendAsyncEvent(ON_REWARDED_VIDEO_STARTED_EVENT);
+    }
+
+    @Override
+    public void onVideoUnitReadyEvent()
+    {
+		sendAsyncEvent(ON_VIDEO_UNIT_READY_EVENT);
+    }
+
+    @Override
+    public void onVideoUnitOpenEvent()
+    {
+		sendAsyncEvent(ON_VIDEO_UNIT_OPEN_EVENT);
+    }
+
+    @Override
+    public void onVideoUnitCloseEvent()
+    {
+		sendAsyncEvent(ON_VIDEO_UNIT_CLOSE_EVENT);
+    }
+	
+	/** 
+	* Send asynchrinus event to GMS event system 
+	*
+	@ param text to print
+	*/
+	private void sendAsyncEvent(double event_type) {
+		int dsMapIndex = RunnerJNILib.jCreateDsMap(null, null, null);
+		RunnerJNILib.DsMapAddString( dsMapIndex, "type", "kidoz_sdk" );
+		RunnerJNILib.DsMapAddDouble( dsMapIndex, "event_type", event_type);
+		RunnerJNILib.CreateAsynEventWithDSMap(dsMapIndex, EVENT_OTHER_SOCIAL);
 	}
 }  

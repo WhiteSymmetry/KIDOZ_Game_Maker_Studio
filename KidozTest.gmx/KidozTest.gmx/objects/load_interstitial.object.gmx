@@ -139,7 +139,7 @@ image_index = 0;
             <kind>1</kind>
             <string>if(Kidoz_get_is_interstitial_loaded() == KIDOZ_FALSE) {
    Kidoz_load_interstitial(KIDOZ_TRUE);
-   Kidoz_print_toast_log("Loading Ad..");
+   Kidoz_print_toast_log("Loading Interstitial Ad..");
 } 
 </string>
           </argument>

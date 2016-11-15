@@ -11,23 +11,21 @@
     <sprite>sprites\add_feed_btn_sprite</sprite>
     <sprite>sprites\show_feed_sprite</sprite>
     <sprite>sprites\add_panel_view_sprite</sprite>
-    <sprite>sprites\add_banner_sprite</sprite>
     <sprite>sprites\expand_panel_sprite</sprite>
     <sprite>sprites\collapse_panel_sprite</sprite>
-    <sprite>sprites\show_banner_sprite</sprite>
-    <sprite>sprites\hide_banner_sprite</sprite>
     <sprite>sprites\add_flexi_pint_sprite</sprite>
+    <sprite>sprites\add_all_widgets_sprite</sprite>
     <sprite>sprites\show_flexi_sprite</sprite>
     <sprite>sprites\hide_flexi_sprite</sprite>
     <sprite>sprites\is_panel_expanded_sprite</sprite>
-    <sprite>sprites\is_banner_visible_sprite</sprite>
     <sprite>sprites\is_flexi_visible_sprite</sprite>
     <sprite>sprites\show_panel_sprite</sprite>
     <sprite>sprites\hide_panel_sprite</sprite>
     <sprite>sprites\show_feed_btn_sprite</sprite>
     <sprite>sprites\hide_feed_btn_sprite</sprite>
     <sprite>sprites\load_interstitial_ad_sprite</sprite>
-    <sprite>sprites\show_interstitial_sprite</sprite>
+    <sprite>sprites\load_rewarded_video_sprite</sprite>
+    <sprite>sprites\event_listener_sprite</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -35,12 +33,10 @@
     <object>objects\show_feed_btn</object>
     <object>objects\add_feed_btn</object>
     <object>objects\add_panel_btn</object>
-    <object>objects\add_banner_btn</object>
-    <object>objects\show_banner_btn</object>
-    <object>objects\hide_banner_btn</object>
     <object>objects\expand_panel_btn</object>
     <object>objects\collapse_panel_btn</object>
     <object>objects\add_flexi_btn</object>
+    <object>objects\add_all_widgets_btn</object>
     <object>objects\show_flexi_btn</object>
     <object>objects\hide_flexi_btn</object>
     <object>objects\chek_panel_state_btn</object>
@@ -49,8 +45,9 @@
     <object>objects\hide_panel_btn</object>
     <object>objects\show_button_btn</object>
     <object>objects\hide_button_btn</object>
-    <object>objects\show_interstitial_ad</object>
+    <object>objects\load_rewarded_video_ad</object>
     <object>objects\load_interstitial</object>
+    <object>objects\event_listener_object</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
