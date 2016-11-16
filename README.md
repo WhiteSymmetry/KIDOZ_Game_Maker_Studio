@@ -67,15 +67,15 @@ if (type == "kidoz_sdk")
   }
   else if(eventType == ON_PANEL_READY_EVENT)
   {
-        Kidoz_print_toast_log("PANEL READY Event");
+        Kidoz_print_toast_log("Panel READY Event");
   }
   else if(eventType == ON_PLAYER_OPEN_EVENT)
   {
-        Kidoz_print_toast_log("PLAER OPEN Event");
+        Kidoz_print_toast_log("Player OPEN Event");
   }
   else if(eventType == ON_PLAYER_CLOSE_EVENT)
   {
-        Kidoz_print_toast_log("PLAER CLOSE Event");
+        Kidoz_print_toast_log("Player CLOSE Event");
   }
   //Additional events can be added to control the sdk actions
   //else if(eventType == ON_FLEXI_VIEW_READY_EVENT)
