@@ -16,7 +16,7 @@ The example application contains the following creative tools:
 * KIDOZ Flexi Point content tool - the `FlexiView`
 * KIDOZ Interstitial/Rewarded Video content tool - the `KidozInterstitial`
 
-### Setup
+## Setup
 When initializing the KIDOZ SDK Extension, please make sure to use your given `publisherID` and `securityToken`. To receive the credentials please sign up [HERE](http://accounts.kidoz.net/publishers/register?utm_source=&utm_content=&utm_campaign=&utm_medium=).
 </br>
  
@@ -30,25 +30,26 @@ Add `Social Event`  [TUTORIAL](https://docs.yoyogames.com/source/dadiospice/001_
 
  - Following events are available:
  
- ON_FEED_DISMISS_EVENT
-	ON_FEED_READY_TO_SHOW_EVENT
-	ON_FEED_READY_EVENT
- ON_PANEL_EXPAND_EVENT
-	ON_PANEL_COLLAPSE_EVENT
- ON_PANEL_READY_EVENT
- ON_FLEXI_VIEW_READY_EVENT
- ON_FLEXI_VIEW_HIDE_EVENT
- ON_FLEXI_VIEW_VISIBLE_EVENT
- ON_PLAYER_OPEN_EVENT;
- ON_PLAYER_CLOSE_EVENT
- ON_INTERSTITIAL_OPEN_EVENT
- ON_INTERSTITIAL_CLOSE_EVENT
- ON_INTERSTITIAL_READY_EVENT
-	ON_INTERSTITIAL_LOAD_FAILED_EVENT
-	ON_REWARDED_EVENT
-	ON_REWARDED_VIDEO_STARTED_EVENT
+ON_FEED_DISMISS_EVENT<br>
+ON_FEED_READY_TO_SHOW_EVENT<br>
+ON_FEED_READY_EVENT<br>
+ON_PANEL_EXPAND_EVENT<br>
+ON_PANEL_COLLAPSE_EVENT<br>
+ON_PANEL_READY_EVENT<br>
+ON_FLEXI_VIEW_READY_EVENT<br>
+ON_FLEXI_VIEW_HIDE_EVENT<br>
+ON_FLEXI_VIEW_VISIBLE_EVENT<br>
+ON_PLAYER_OPEN_EVENT<br>
+ON_PLAYER_CLOSE_EVENT<br>
+ON_INTERSTITIAL_OPEN_EVENT<br>
+ON_INTERSTITIAL_CLOSE_EVENT<br>
+ON_INTERSTITIAL_READY_EVENT<br>
+ON_INTERSTITIAL_LOAD_FAILED_EVENT<br>
+ON_REWARDED_EVENT<br>
+ON_REWARDED_VIDEO_STARTED_EVENT<br>
 
-# Example of usage
+## Example of usage
+Add this code to your object
 
 ```groovy
 var type = async_load[? "type"];
