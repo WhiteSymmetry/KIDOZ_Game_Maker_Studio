@@ -5,7 +5,7 @@
 =================================
 **IMPORTANT!!! KIDOZ SDK Android Extension For Game Maker Studio, compatible with Android 4.0 (API level 14) and above.** 
 
-*Updated to KIDOZ SDK version 0.6.0*
+*Updated to KIDOZ SDK version 0.7.0*
  
 Inludes GMS KIDOZ SDK Android Extension library + Sample project and example of the [KIDOZ](http://www.kidoz.net) SDK integration for Game Maker Studio android extension.
 
