@@ -30,25 +30,25 @@ if (type == "kidoz_sdk")
 {
   var eventType = async_load[? "event_type"];
   
-  if(eventType == ON_FEED_DISMISS_EVENT) 
+  if(eventType == ON_PANEL_EXPAND_EVENT) 
   {
-        Kidoz_print_toast_log("FEED DISMISS Event");
+        Kidoz_print_toast_log("Panel EXPANDED Event");
   }
-  else if(eventType == ON_INTERSTITIAL_LOAD_FAILED_EVENT)
+  else if(eventType == ON_PANEL_COLLAPSE_EVENT)
   {
-        Kidoz_print_toast_log("INTERSTITIAL LOAD_FAILED");
+        Kidoz_print_toast_log("Panel COLLAPSED Event");
   }
-  else if(eventType == ON_INTERSTITIAL_OPEN_EVENT)
+  else if(eventType == ON_PANEL_READY_EVENT)
   {
-        Kidoz_print_toast_log("INTERSTITIAL OPEN");
+        Kidoz_print_toast_log("PANEL READY Event");
   }
-  else if(eventType == ON_INTERSTITIAL_CLOSE_EVENT)
+  else if(eventType == ON_PLAYER_OPEN_EVENT)
   {
-        Kidoz_print_toast_log("INTERSTITIAL CLOSE");
+        Kidoz_print_toast_log("PLAER OPEN Event");
   }
-  else if(eventType == ON_INTERSTITIAL_READY_EVENT)
+  else if(eventType == ON_PLAYER_CLOSE_EVENT)
   {
-        Kidoz_print_toast_log("INTERSTITIAL READY");
+        Kidoz_print_toast_log("PLAER CLOSE Event");
   }
   //Additional events can be added to control the sdk actions
   //else if(eventType == ON_FLEXI_VIEW_READY_EVENT)
