@@ -19,6 +19,7 @@ The example application contains the following creative tools:
 ## Setup
 
 Import kidoz SDK extension file (`Kidoz_Android_Extension_v0.7.1.gmez`) to your project
+</br>
 <img src="https://s3.amazonaws.com/kidoz-cdn/sdk/GitHub_Tutorial_Img/gms_tutorial_2.JPG" width="230px" height="260px">
 
 When initializing the KIDOZ SDK Extension, please make sure to use your given `publisherID` and `securityToken`. To receive the credentials please sign up [HERE](http://accounts.kidoz.net/publishers/register?utm_source=&utm_content=&utm_campaign=&utm_medium=).
